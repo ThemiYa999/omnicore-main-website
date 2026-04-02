@@ -1,4 +1,3 @@
-import ScrollSnapBridge from '@/components/ScrollSnapBridge'
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import ClientTicker from '@/components/ClientTicker'
@@ -12,7 +11,6 @@ import HudOverlay from '@/components/HudOverlay'
 export default function Home() {
   return (
     <>
-      <ScrollSnapBridge />
       <Nav />
       <main>
         <Hero />
