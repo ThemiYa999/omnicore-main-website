@@ -1,19 +1,5 @@
 @import "tailwindcss";
 
-/* Snap scroll — hero ↔ services only. Eliminates lag in the Spline transition zone. */
-html {
-  scroll-snap-type: y mandatory;
-}
-
-#hero {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
-#services {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
 
 :root {
   --background: #000000;

@@ -8,10 +8,12 @@ import About from '@/components/About'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import HudOverlay from '@/components/HudOverlay'
+import ScrollSnapBridge from '@/components/ScrollSnapBridge'
 
 export default function Home() {
   return (
     <>
+      <ScrollSnapBridge />
       <Nav />
       <main>
         <Hero />
