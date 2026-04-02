@@ -6,7 +6,6 @@ function easeInOut(t: number): number {
   return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t
 }
 
-/** Custom scroll animation — resolves when complete, so no race conditions. */
 function animateScrollTo(targetY: number, duration = 1200): Promise<void> {
   return new Promise((resolve) => {
     const startY = window.scrollY
@@ -23,12 +22,6 @@ function animateScrollTo(targetY: number, duration = 1200): Promise<void> {
   })
 }
 
-/**
- * Intercepts wheel events ONLY in the hero ↔ services transition zone.
- * - Down from hero  → glides to services, then releases completely.
- * - Up at services top → glides back to hero.
- * - Everywhere else: zero interception, fully free scroll.
- */
 export default function ScrollSnapBridge() {
   const snapping = useRef(false)
 
@@ -44,25 +37,27 @@ export default function ScrollSnapBridge() {
       }
 
       const scrollY = window.scrollY
-      const heroBottom = hero.offsetTop + hero.offsetHeight   // bottom edge of hero
-      const servicesTop = services.offsetTop                  // top edge of services
+      const heroBottom = hero.offsetTop + hero.offsetHeight
+      const servicesTop = services.offsetTop
 
-      // Scrolling down while still inside the hero (hasn't passed hero's bottom)
+      // Down: still inside hero → glide to services
       if (e.deltaY > 0 && scrollY < heroBottom - 10) {
         e.preventDefault()
         snapping.current = true
         animateScrollTo(servicesTop, 1200).then(() => {
-          snapping.current = false
+          // 200ms cooldown flushes any lingering trackpad deceleration events
+          setTimeout(() => { snapping.current = false }, 200)
         })
         return
       }
 
-      // Scrolling up while right at the very top of services (within 150px)
-      if (e.deltaY < 0 && scrollY >= servicesTop - 80 && scrollY <= servicesTop + 150) {
+      // Up: scrolled at least 30px INTO services (not just landed there) → glide back to hero
+      // Lower bound > servicesTop+30 prevents false trigger right after the down-snap lands
+      if (e.deltaY < 0 && scrollY > servicesTop + 30 && scrollY < servicesTop + 200) {
         e.preventDefault()
         snapping.current = true
         animateScrollTo(hero.offsetTop, 1200).then(() => {
-          snapping.current = false
+          setTimeout(() => { snapping.current = false }, 200)
         })
       }
     }
