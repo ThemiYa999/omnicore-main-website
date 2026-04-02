@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { useGlitch } from '@/context/GlitchContext'
 
 const GLITCH_CHARS = '!<>-_\\/[]{}=+*^?#ABCDEFabcdef0123456789@$%'
 const HEADLINE_TEXTS = ['TRANSFORM WITH AI', 'REDEFINE THE FUTURE', 'AUTOMATE EVERYTHING']
@@ -60,6 +61,7 @@ function useGlitchCycle(texts: string[], cycleMs: number, enabled: boolean) {
 }
 
 export default function HeroText() {
+  const { triggerGlitch, active } = useGlitch()
   const [typewriterText, setTypewriterText] = useState('')
   const [done, setDone] = useState(false)
 
@@ -116,8 +118,9 @@ export default function HeroText() {
           className="flex justify-center pointer-events-auto"
         >
           <button
-            onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-            className="font-[family-name:var(--font-space-mono)] text-[13px] tracking-[0.2em] bg-[#0d0d0d] text-white px-10 py-4 rounded-lg border border-white/10 hover:bg-[#8F00FF] hover:border-[#8F00FF] hover-glow transition-[background-color,border-color,box-shadow] duration-200 focus-visible:ring-2 focus-visible:ring-[#8F00FF] focus-visible:outline-none"
+            onClick={() => triggerGlitch('services')}
+            disabled={active}
+            className="font-[family-name:var(--font-space-mono)] text-[13px] tracking-[0.2em] bg-[#0d0d0d] text-white px-10 py-4 rounded-lg border border-white/10 hover:bg-[#8F00FF] hover:border-[#8F00FF] hover-glow transition-[background-color,border-color,box-shadow] duration-200 focus-visible:ring-2 focus-visible:ring-[#8F00FF] focus-visible:outline-none disabled:opacity-40 disabled:cursor-not-allowed"
           >
             [ EXPLORE SERVICES ]
           </button>
