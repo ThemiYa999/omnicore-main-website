@@ -2,12 +2,10 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { useGlitch } from '@/context/GlitchContext'
 
 const navLinks = ['SERVICES', 'PROCESS', 'WORK', 'ABOUT', 'CONTACT']
 
 export default function Nav() {
-  const { triggerGlitch, active } = useGlitch()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -18,13 +16,7 @@ export default function Nav() {
   }, [])
 
   const scrollTo = (id: string) => {
-    const hero = document.getElementById('hero')
-    const inHero = hero ? window.scrollY < hero.offsetHeight - 20 : false
-    if (inHero) {
-      triggerGlitch(id.toLowerCase())
-    } else {
-      document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: 'smooth' })
-    }
+    document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: 'smooth' })
     setMenuOpen(false)
   }
 
@@ -47,8 +39,7 @@ export default function Nav() {
               <button
                 key={link}
                 onClick={() => scrollTo(link)}
-                disabled={active}
-                className="font-[family-name:var(--font-space-mono)] text-[11px] tracking-[0.2em] text-white/60 hover:text-[#9457EB] transition-colors duration-200 disabled:opacity-40"
+                className="font-[family-name:var(--font-space-mono)] text-[11px] tracking-[0.2em] text-white/60 hover:text-[#9457EB] transition-colors duration-200"
               >
                 {link}
               </button>

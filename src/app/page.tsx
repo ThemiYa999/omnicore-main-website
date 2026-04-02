@@ -8,15 +8,10 @@ import About from '@/components/About'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import HudOverlay from '@/components/HudOverlay'
-import GlitchOverlayWrapper from '@/components/GlitchOverlayWrapper'
-import ScrollUpHint from '@/components/ScrollUpHint'
-import { GlitchProvider } from '@/context/GlitchContext'
 
 export default function Home() {
   return (
-    <GlitchProvider>
-      <GlitchOverlayWrapper />
-      <ScrollUpHint />
+    <>
       <Nav />
       <main>
         <Hero />
@@ -29,6 +24,6 @@ export default function Home() {
       </main>
       <Footer />
       <HudOverlay />
-    </GlitchProvider>
+    </>
   )
 }
