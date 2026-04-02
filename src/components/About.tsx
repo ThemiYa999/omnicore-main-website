@@ -65,7 +65,7 @@ export default function About() {
                   AT SCALE
                 </span>
               </h2>
-              <p className="font-[family-name:var(--font-inter)] text-base text-white/60 leading-relaxed mb-6 max-w-md">
+              <p className="font-[family-name:var(--font-space-mono)] text-[13px] text-white/60 leading-relaxed mb-6 max-w-md">
                 OmniCore is an AI agency focused on building intelligent systems that help businesses automate processes, unlock insights, and scale efficiently.
               </p>
               <p className="font-[family-name:var(--font-space-mono)] text-[13px] text-white/40 leading-relaxed max-w-md">
