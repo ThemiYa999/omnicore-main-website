@@ -49,6 +49,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://omnicore.lk",
   },
+  verification: {
+    google: "EQ-qp09y-7sZCdKeIN4q_T_p9YqVk8AxgX2Ux2aGykY",
+  },
 };
 
 export default function RootLayout({
