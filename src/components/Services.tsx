@@ -5,37 +5,37 @@ const services = [
     id: '01',
     title: 'AI_AUTOMATION',
     description: 'Eliminate repetitive tasks with intelligent workflows that scale. Free your team to focus on high-value decisions while AI handles the rest.',
-    examples: ['Auto-reply emails', 'End-to-end business workflow automation'],
+    examples: ['Auto-reply emails', 'Invoice processing & data entry', 'Multi-step approval workflows', 'End-to-end business workflow automation'],
   },
   {
     id: '02',
     title: 'WEB_DEVELOPMENT',
     description: 'Full-stack digital products built to perform. From sleek marketing sites to complex platforms — we design, build, and ship end to end.',
-    examples: ['Landing pages & marketing sites', 'Full SaaS platforms with auth, billing & dashboards'],
+    examples: ['Landing pages & marketing sites', 'E-commerce stores', 'Client portals & admin dashboards', 'Full SaaS platforms with auth, billing & dashboards'],
   },
   {
     id: '03',
     title: 'CUSTOM_MODELS',
     description: 'Tailored AI models built and trained for your specific use case. From NLP pipelines to computer vision — we engineer precision.',
-    examples: ['Spam filter', 'Computer vision pipeline trained on your data'],
+    examples: ['Spam filter', 'Sentiment analysis for reviews', 'Document classification system', 'Computer vision pipeline trained on your data'],
   },
   {
     id: '04',
     title: 'DATA_INTELLIGENCE',
     description: 'Transform raw data into actionable business insights. Real-time analytics, predictive modeling, and intelligent reporting.',
-    examples: ['Automated sales reports', 'Predictive demand forecasting'],
+    examples: ['Automated sales reports', 'Customer behaviour analytics', 'Real-time KPI dashboards', 'Predictive demand forecasting'],
   },
   {
     id: '05',
     title: 'AI_INTEGRATION',
     description: 'Connect AI capabilities into your existing infrastructure seamlessly. No rip-and-replace — we augment what you already have.',
-    examples: ['Chatbot added to your site', 'AI embedded deep into enterprise systems'],
+    examples: ['Chatbot added to your site', 'CRM with AI lead scoring', 'AI-powered search & recommendations', 'AI embedded deep into enterprise systems'],
   },
   {
     id: '06',
     title: 'CONVERSATIONAL_AI',
     description: 'Intelligent chatbots and virtual assistants for any platform — WhatsApp, Instagram, Telegram, and your website.',
-    examples: ['Simple FAQ bot', 'Fully autonomous customer support agent'],
+    examples: ['Simple FAQ bot', 'Appointment booking assistant', 'Multi-platform support agent', 'Fully autonomous customer support agent'],
   },
 ]
 
