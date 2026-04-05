@@ -233,12 +233,12 @@ body {
 }
 .services-expanded-examples {
   font-family: var(--font-space-mono), monospace;
-  font-size: 11px;
-  color: rgba(143,0,255,0.7);
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(143,0,255,0.15);
-  letter-spacing: 0.05em;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
 }
 
 /* Hero glow pulse */
