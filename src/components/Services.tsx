@@ -4,32 +4,32 @@ const services = [
   {
     id: '01',
     title: 'AI_AUTOMATION',
-    description: 'Eliminate repetitive tasks with intelligent workflows that scale. Free your team to focus on high-value decisions while AI handles the rest.',
+    description: 'From auto-reply emails to full end-to-end business workflow automation. We eliminate the manual work — small tasks to entire operations.',
   },
   {
     id: '02',
-    title: 'CUSTOM_MODELS',
-    description: 'Tailored AI models built and trained for your specific use case. From NLP pipelines to computer vision — we engineer precision.',
+    title: 'WEB_DEVELOPMENT',
+    description: 'Landing pages to full SaaS platforms with auth, billing, and dashboards. We design, build, and ship whatever you need — simple or complex.',
   },
   {
     id: '03',
-    title: 'DATA_INTELLIGENCE',
-    description: 'Transform raw data into actionable business insights. Real-time analytics, predictive modeling, and intelligent reporting.',
+    title: 'CUSTOM_MODELS',
+    description: 'From a simple spam filter to a full computer vision pipeline trained on your data. Precision-built for your exact use case.',
   },
   {
     id: '04',
-    title: 'AI_INTEGRATION',
-    description: 'Connect AI capabilities into your existing infrastructure seamlessly. No rip-and-replace — we augment what you already have.',
+    title: 'DATA_INTELLIGENCE',
+    description: 'From automated sales reports to predictive demand forecasting. Raw data turned into decisions that move your business forward.',
   },
   {
     id: '05',
-    title: 'CONVERSATIONAL_AI',
-    description: 'Intelligent chatbots and virtual assistants for any platform — WhatsApp, Instagram, Telegram, and your website.',
+    title: 'AI_INTEGRATION',
+    description: 'Adding a chatbot to your site or embedding AI deep into enterprise systems. We connect AI to what you already have — no rip-and-replace.',
   },
   {
     id: '06',
-    title: 'AI_STRATEGY',
-    description: 'Navigate the AI landscape with expert guidance. We identify the highest-impact opportunities and build your roadmap.',
+    title: 'CONVERSATIONAL_AI',
+    description: 'From a simple FAQ bot to a fully autonomous customer support agent across WhatsApp, Instagram, Telegram, and your website.',
   },
 ]
 
