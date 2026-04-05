@@ -4,32 +4,38 @@ const services = [
   {
     id: '01',
     title: 'AI_AUTOMATION',
-    description: 'From auto-reply emails to full end-to-end business workflow automation. We eliminate the manual work — small tasks to entire operations.',
+    description: 'Eliminate repetitive tasks with intelligent workflows that scale. Free your team to focus on high-value decisions while AI handles the rest.',
+    examples: 'Auto-reply emails → End-to-end business workflow automation',
   },
   {
     id: '02',
     title: 'WEB_DEVELOPMENT',
-    description: 'Landing pages to full SaaS platforms with auth, billing, and dashboards. We design, build, and ship whatever you need — simple or complex.',
+    description: 'Full-stack digital products built to perform. From sleek marketing sites to complex platforms — we design, build, and ship end to end.',
+    examples: 'Landing pages → Full SaaS platforms with auth, billing & dashboards',
   },
   {
     id: '03',
     title: 'CUSTOM_MODELS',
-    description: 'From a simple spam filter to a full computer vision pipeline trained on your data. Precision-built for your exact use case.',
+    description: 'Tailored AI models built and trained for your specific use case. From NLP pipelines to computer vision — we engineer precision.',
+    examples: 'Spam filter → Computer vision pipeline trained on your data',
   },
   {
     id: '04',
     title: 'DATA_INTELLIGENCE',
-    description: 'From automated sales reports to predictive demand forecasting. Raw data turned into decisions that move your business forward.',
+    description: 'Transform raw data into actionable business insights. Real-time analytics, predictive modeling, and intelligent reporting.',
+    examples: 'Automated sales reports → Predictive demand forecasting',
   },
   {
     id: '05',
     title: 'AI_INTEGRATION',
-    description: 'Adding a chatbot to your site or embedding AI deep into enterprise systems. We connect AI to what you already have — no rip-and-replace.',
+    description: 'Connect AI capabilities into your existing infrastructure seamlessly. No rip-and-replace — we augment what you already have.',
+    examples: 'Chatbot on your site → AI embedded into enterprise systems',
   },
   {
     id: '06',
     title: 'CONVERSATIONAL_AI',
-    description: 'From a simple FAQ bot to a fully autonomous customer support agent across WhatsApp, Instagram, Telegram, and your website.',
+    description: 'Intelligent chatbots and virtual assistants for any platform — WhatsApp, Instagram, Telegram, and your website.',
+    examples: 'Simple FAQ bot → Fully autonomous customer support agent',
   },
 ]
 
@@ -63,6 +69,7 @@ export default function Services() {
                   <span className="services-expanded-num">{s.id}</span>
                   <h3 className="services-expanded-title">{s.title}</h3>
                   <p className="services-expanded-desc">{s.description}</p>
+                  <p className="services-expanded-examples">{s.examples}</p>
                 </div>
               </div>
             ))}
